@@ -1,5 +1,8 @@
-﻿using Playnite.FullscreenApp.Controls.SettingsSections;
+﻿using Playnite.Common;
+using Playnite.FullscreenApp.Controls.SettingsSections;
+using Playnite.FullscreenApp.Windows;
 using Playnite.SDK;
+using Playnite.ViewModels;
 using Playnite.Windows;
 using System;
 using System.Collections.Generic;
@@ -16,6 +19,7 @@ namespace Playnite.FullscreenApp.ViewModels
     {
         private static readonly ILogger logger = LogManager.GetLogger();
         private readonly IWindowFactory window;
+        private readonly FullscreenAppViewModel mainModel;
         private readonly Dictionary<int, SettingsSectionControl> sectionViews;
         private IInputElement oldFocus;
         private List<string> editedFields = new List<string>();
@@ -77,11 +81,38 @@ namespace Playnite.FullscreenApp.ViewModels
             get => new RelayCommand<string>((a) => OpenSection(a));
         }
 
+        public RelayCommand MinimizeCommand => new RelayCommand(() =>
+        {
+            window.Close(true);
+            mainModel.MinimizeWindow();
+        });
+
+        public RelayCommand OpenHelpCommand => new RelayCommand(() =>
+        {
+            window.Close(true);
+            var vm = new HelpMenuViewModel(new HelpMenuWindowFactory(), mainModel);
+            vm.OpenView();
+        });
+
+        public RelayCommand ExitCommand => new RelayCommand(() =>
+        {
+            window.Close(true);
+            mainModel.CloseView();
+            mainModel.App.Quit();
+        });
+
+        public RelayCommand SwitchToDesktopCommand => new RelayCommand(() =>
+        {
+            window.Close(true);
+            mainModel.SwitchToDesktopMode();
+        });
+
         public SettingsViewModel(
             IWindowFactory window,
             FullscreenAppViewModel mainModel)
         {
             this.window = window;
+            this.mainModel = mainModel;
             mainModel.AppSettings.Fullscreen.PropertyChanged += (_, e) => editedFields.AddMissing(e.PropertyName);
             sectionViews = new Dictionary<int, SettingsSectionControl>()
             {

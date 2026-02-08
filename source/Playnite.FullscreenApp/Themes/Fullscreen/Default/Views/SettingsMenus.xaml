@@ -149,4 +149,36 @@
             <TextBlock Text="{DynamicResource LOCSettingsFSSection}" VerticalAlignment="Center" />
         </StackPanel>
     </DataTemplate>
+
+    <DataTemplate x:Key="SettingsMenuMinimizeButtonTemplate">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="&#xef9e;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
+                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBlock Text="{DynamicResource LOCMinimize}" VerticalAlignment="Center" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SettingsMenuHelpButtonTemplate">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="&#xefca;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
+                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBlock Text="{DynamicResource LOCMenuHelpTitle}" VerticalAlignment="Center" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SettingsMenuExitButtonTemplate">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="&#xef16;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
+                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBlock Text="{DynamicResource LOCExitPlaynite}" VerticalAlignment="Center" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SettingsMenuSwitchDesktopButtonTemplate">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="&#xef1d;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
+                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBlock Text="{DynamicResource LOCBackToDesktopMode}" VerticalAlignment="Center" />
+        </StackPanel>
+    </DataTemplate>
 </ResourceDictionary>

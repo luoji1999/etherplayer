@@ -80,15 +80,6 @@
                                      Command="{Binding OpenExtensionsCommand}"
                                      AutomationProperties.Name="{DynamicResource LOCExtensions}"/>
                     <Canvas Height="20" />
-                    <pctrls:ButtonEx x:Name="PART_ButtonExitPlaynite"
-                                     ContentTemplate="{DynamicResource MainMenuExitPlayniteButtonTemplate}"
-                                     Command="{Binding ExitCommand}"
-                                     AutomationProperties.Name="{DynamicResource LOCExitPlaynite}" />
-                    <pctrls:ButtonEx x:Name="PART_ButtonSwitchToDesktop"
-                                     ContentTemplate="{DynamicResource MainMenuSwithDesktopButtonTemplate}"
-                                     Command="{Binding SwitchToDesktopCommand}"
-                                     AutomationProperties.Name="{DynamicResource LOCBackToDesktopMode}"  />
-                    <Canvas Height="20" />
                     <pctrls:ButtonEx x:Name="PART_ButtonShutdownSystem"
                                      ContentTemplate="{DynamicResource MainMenuShutdowButtonTemplate}"
                                      Command="{Binding ShutdownSystemCommand}"
@@ -120,24 +111,6 @@
                                   Visibility="{pmrk:SettingsBinding Fullscreen.MainMenuShowLogout, Converter={StaticResource BooleanToVisibilityConverter}}"
                                   AutomationProperties.Name="{DynamicResource LOCMenuRestartSystem}"/>
 
-                    <Canvas Height="40" />
-                    <pctrls:ButtonEx x:Name="PART_ButtonFeedback"
-                                     ContentTemplate="{DynamicResource MainMenuHelpButtonTemplate}"
-                                     Command="{Binding OpenHelpCommand}"
-                                     AutomationProperties.Name="{DynamicResource LOCMenuHelpTitle}" />
-                    <pctrls:ButtonEx x:Name="PART_ButtonPatreon"
-                                     ContentTemplate="{DynamicResource MainMenuPatreonButtonTemplate}"
-                                     Command="{Binding OpenPatreonCommand}"
-                                     AutomationProperties.Name="{DynamicResource LOCMenuPatreonSupport}" />
-                    <pctrls:ButtonEx x:Name="PART_ButtonKofi"
-                                     ContentTemplate="{DynamicResource MainMenuKofiButtonTemplate}"
-                                     Command="{Binding OpenKofiCommand}"
-                                     AutomationProperties.Name="{DynamicResource LOCMenuKofiSupport}" />
-                    <pctrls:ButtonEx x:Name="PART_ButtonMinimize"
-                                     ContentTemplate="{DynamicResource MainMenuMinimizeButtonTemplate}"
-                                     Command="{Binding MinimizeCommand}"                                     
-                                     Visibility="{pmrk:SettingsBinding Fullscreen.MainMenuShowMinimize, Converter={StaticResource BooleanToVisibilityConverter}}"
-                                     AutomationProperties.Name="{DynamicResource LOCMinimize}" />
                 </StackPanel>
             </Border>
 

@@ -55,7 +55,7 @@
                         <Style TargetType="pctrls:ButtonEx" BasedOn="{StaticResource SettingsMenuButton}">
                             <Setter Property="Command" Value="{Binding OpenSectionCommand}" />
                         </Style>
-                    </StackPanel.Resources>                    
+                    </StackPanel.Resources>
                     
                     <ContentControl ContentTemplate="{DynamicResource SettingsMenuHeaderTemplate}"
                                     Focusable="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
@@ -73,6 +73,20 @@
                                      AutomationProperties.Name="{DynamicResource LOCSettingsFSSectionMenus}" />
                     <pctrls:ButtonEx ContentTemplate="{DynamicResource SettingsMenuInputButtonTemplate}" CommandParameter="4"
                                      AutomationProperties.Name="{DynamicResource LOCSettingsFSSection}" />
+
+                    <Canvas Height="20" />
+                    <pctrls:ButtonEx ContentTemplate="{DynamicResource SettingsMenuMinimizeButtonTemplate}"
+                                     Command="{Binding MinimizeCommand}"
+                                     AutomationProperties.Name="{DynamicResource LOCMinimize}" />
+                    <pctrls:ButtonEx ContentTemplate="{DynamicResource SettingsMenuHelpButtonTemplate}"
+                                     Command="{Binding OpenHelpCommand}"
+                                     AutomationProperties.Name="{DynamicResource LOCMenuHelpTitle}" />
+                    <pctrls:ButtonEx ContentTemplate="{DynamicResource SettingsMenuExitButtonTemplate}"
+                                     Command="{Binding ExitCommand}"
+                                     AutomationProperties.Name="{DynamicResource LOCExitPlaynite}" />
+                    <pctrls:ButtonEx ContentTemplate="{DynamicResource SettingsMenuSwitchDesktopButtonTemplate}"
+                                     Command="{Binding SwitchToDesktopCommand}"
+                                     AutomationProperties.Name="{DynamicResource LOCBackToDesktopMode}" />
 
                     <TextBlock Style="{StaticResource TextBlockBaseStyle}"
                                Text="{DynamicResource LOCSettingsRestartNotification}"

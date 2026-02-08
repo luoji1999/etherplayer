@@ -200,11 +200,6 @@ namespace Playnite.DesktopApp.Controls
             AddMenuChild(Items, "LOCCheckForUpdates", mainModel.CheckForUpdateCommand);
             Items.Add(new Separator());
 
-            // Patreon
-            AddMenuChild(Items, "LOCMenuPatreonSupport", GlobalCommands.NavigateUrlCommand, UrlConstants.Patreon, "Images/patreon.png");
-            AddMenuChild(Items, "LOCMenuKofiSupport", GlobalCommands.NavigateUrlCommand, UrlConstants.Kofi, "Images/kofi.png");
-            Items.Add(new Separator());
-
             // Exit
             AddMenuChild(Items, "LOCExitAppLabel", mainModel.ShutdownCommand, null, "ExitIcon");
         }

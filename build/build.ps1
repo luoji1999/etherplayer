@@ -7,7 +7,7 @@ param(
     
     # Target platform
     [ValidateSet("x86", "x64")]
-    [string]$Platform = "x64",
+    [string]$Platform = "x86",
 
     # Target directory for build files    
     [string]$OutputDir,

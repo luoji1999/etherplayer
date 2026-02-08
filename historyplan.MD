@@ -28,4 +28,12 @@
 - 引入 Git 版本管理：初始化 Git 仓库，提交当前项目基线状态（1363 个文件）。
 - 新增 `GIT_GUIDE.md` 版本管理指南文档，涵盖日常工作流、分支策略、回退方法、与 AI 助手协作建议等。
 - 解决了之前"复制整个项目文件夹"做版本管理的痛点，改用 Git 分支 + 提交的标准工作流。
+- 去除桌面模式和全屏模式下「在 Patreon 上支持我们」和「在 Ko-fi 上支持我们」两个菜单项及相关功能：
+  - 桌面模式：移除 `MainMenu.cs` 中 Patreon/Ko-fi 菜单项的添加代码。
+  - 全屏模式：移除 `MainMenuViewModel.cs` 中 `OpenPatreonCommand`/`OpenKofiCommand` 命令及 `OpenPatreon()`/`OpenKofi()` 方法；移除 `MainMenuWindow.xaml` 中对应的两个按钮；移除 `MainMenu.xaml` 主题模板中 `MainMenuPatreonButtonTemplate`/`MainMenuKofiButtonTemplate` 数据模板。
+- 将全屏模式主菜单中的【最小化】【帮助】【退出以太玩家】【切换至桌面模式】四个控制按钮迁移至全屏模式的【设置】页面中：
+  - `MainMenuWindow.xaml`：移除 `PART_ButtonExitPlaynite`、`PART_ButtonSwitchToDesktop`、`PART_ButtonFeedback`（帮助）、`PART_ButtonMinimize` 四个按钮。
+  - `SettingsViewModel.cs`：新增 `MinimizeCommand`、`OpenHelpCommand`、`ExitCommand`、`SwitchToDesktopCommand` 四个命令，保存 `mainModel` 引用以调用对应功能。
+  - `SettingsWindow.xaml`：在设置菜单按钮列表底部添加四个新按钮，分别绑定上述命令。
+  - `SettingsMenus.xaml`：新增 `SettingsMenuMinimizeButtonTemplate`、`SettingsMenuHelpButtonTemplate`、`SettingsMenuExitButtonTemplate`、`SettingsMenuSwitchDesktopButtonTemplate` 四个 DataTemplate。
 
