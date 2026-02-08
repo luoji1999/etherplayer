@@ -23,3 +23,9 @@
 - 修复 NuGet 包缺失导致的构建失败：在 `source/Playnite/packages.config` 中添加 `Magick.NET-Q8-x64` 包引用（项目文件引用了 x64 版本但 packages.config 中只有 x86 版本）。
 - 新增 `clean.bat` 清理脚本，用于清理构建产物（build/Debug、build/Release、source/packages、obj、bin 目录），避免项目体积膨胀。
 
+## 2026-02-08
+
+- 引入 Git 版本管理：初始化 Git 仓库，提交当前项目基线状态（1363 个文件）。
+- 新增 `GIT_GUIDE.md` 版本管理指南文档，涵盖日常工作流、分支策略、回退方法、与 AI 助手协作建议等。
+- 解决了之前"复制整个项目文件夹"做版本管理的痛点，改用 Git 分支 + 提交的标准工作流。
+
