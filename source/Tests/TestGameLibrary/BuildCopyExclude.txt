@@ -1,0 +1,6 @@
+ETPlayer.SDK.dll
+ETPlayer.SDK.pdb
+ETPlayer.SDK.xml
+LiteDB.dll
+Newtonsoft.Json.dll
+Newtonsoft.Json.xml

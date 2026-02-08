@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ETPlayerSDK</id>
+    <version>{Version}</version>
+    <title>ETPlayer SDK</title>
+    <authors>Josef Nemec</authors>
+    <owners>JosefNemec</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://game.etherplayer.pro/</projectUrl>
+    <icon>images\applogo.png</icon>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SDK plugin library for ETPlayer video game library manager.</description>
+    <releaseNotes>https://game.etherplayer.pro/</releaseNotes>
+    <copyright>Copyright © Josef Nemec 2018</copyright>
+    <tags>sdk gaming</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2" />
+    </dependencies>
+    <readme>docs\readme.md</readme>
+  </metadata>
+  <files>
+    <file src="{OutDir}\ETPlayer.SDK.dll" target="lib\net462\ETPlayer.SDK.dll" />
+    <file src="{OutDir}\ETPlayer.SDK.xml" target="lib\net462\ETPlayer.SDK.xml" />
+    <file src="..\source\Playnite.DesktopApp\Themes\Desktop\Default\Images\applogo.png" target="images\" />
+    <file src="..\source\PlayniteSDK\readme.md" target="docs\" />
+</files>
+</package>
