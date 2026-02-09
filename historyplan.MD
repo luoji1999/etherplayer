@@ -37,3 +37,8 @@
   - `SettingsWindow.xaml`：在设置菜单按钮列表底部添加四个新按钮，分别绑定上述命令。
   - `SettingsMenus.xaml`：新增 `SettingsMenuMinimizeButtonTemplate`、`SettingsMenuHelpButtonTemplate`、`SettingsMenuExitButtonTemplate`、`SettingsMenuSwitchDesktopButtonTemplate` 四个 DataTemplate。
 
+## 2026-02-09
+
+- 修复一键构建脚本默认平台不一致问题：`build.bat` 的默认 `PLATFORM` 从 `x64` 改为 `x86`，与脚本说明和当前可用构建路径保持一致。
+- 修复 x86 构建失败（CS8012）问题：`source/Playnite/Playnite.csproj` 中 `Magick.NET` 引用由固定 `x64` 改为按 `PlatformTarget` 条件选择 `x86/x64`，并同步调整 NuGet targets 的校验与导入条件。
+

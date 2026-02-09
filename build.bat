@@ -32,7 +32,7 @@ set "SOURCE_DIR=%SCRIPT_DIR%source"
 
 :: 默认配置
 set "CONFIG=Release"
-set "PLATFORM=x64"
+set "PLATFORM=x86"
 set "DO_PACKAGE="
 set "DO_CLEAN="
 set "PWSH_CMD="

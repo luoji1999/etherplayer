@@ -105,7 +105,10 @@
     <Reference Include="LiteDB, Version=4.1.4.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
       <HintPath>..\packages\LiteDB.4.1.4\lib\net40\LiteDB.dll</HintPath>
     </Reference>
-    <Reference Include="Magick.NET-Q8-x64, Version=14.10.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=AMD64">
+    <Reference Include="Magick.NET-Q8-x86, Version=14.10.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=X86" Condition="'$(PlatformTarget)' == 'x86'">
+      <HintPath>..\packages\Magick.NET-Q8-x86.14.10.0\lib\netstandard20\Magick.NET-Q8-x86.dll</HintPath>
+    </Reference>
+    <Reference Include="Magick.NET-Q8-x64, Version=14.10.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=AMD64" Condition="'$(PlatformTarget)' == 'x64'">
       <HintPath>..\packages\Magick.NET-Q8-x64.14.10.0\lib\netstandard20\Magick.NET-Q8-x64.dll</HintPath>
     </Reference>
     <Reference Include="Magick.NET.Core, Version=14.10.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
@@ -647,7 +650,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Magick.NET-Q8-x64.14.10.0\build\netstandard20\Magick.NET-Q8-x64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Magick.NET-Q8-x64.14.10.0\build\netstandard20\Magick.NET-Q8-x64.targets'))" />
+    <Error Condition="'$(PlatformTarget)' == 'x86' and !Exists('..\packages\Magick.NET-Q8-x86.14.10.0\build\netstandard20\Magick.NET-Q8-x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Magick.NET-Q8-x86.14.10.0\build\netstandard20\Magick.NET-Q8-x86.targets'))" />
+    <Error Condition="'$(PlatformTarget)' == 'x64' and !Exists('..\packages\Magick.NET-Q8-x64.14.10.0\build\netstandard20\Magick.NET-Q8-x64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Magick.NET-Q8-x64.14.10.0\build\netstandard20\Magick.NET-Q8-x64.targets'))" />
     <Error Condition="!Exists('..\packages\chromiumembeddedframework.runtime.win-x64.143.0.9\build\chromiumembeddedframework.runtime.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\chromiumembeddedframework.runtime.win-x64.143.0.9\build\chromiumembeddedframework.runtime.win-x64.props'))" />
     <Error Condition="!Exists('..\packages\chromiumembeddedframework.runtime.win-x86.143.0.9\build\chromiumembeddedframework.runtime.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\chromiumembeddedframework.runtime.win-x86.143.0.9\build\chromiumembeddedframework.runtime.win-x86.props'))" />
     <Error Condition="!Exists('..\packages\CefSharp.Common.143.0.90\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.143.0.90\build\CefSharp.Common.props'))" />
@@ -660,6 +664,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Import Project="..\packages\Magick.NET-Q8-x64.14.10.0\build\netstandard20\Magick.NET-Q8-x64.targets" Condition="Exists('..\packages\Magick.NET-Q8-x64.14.10.0\build\netstandard20\Magick.NET-Q8-x64.targets')" />
+  <Import Project="..\packages\Magick.NET-Q8-x86.14.10.0\build\netstandard20\Magick.NET-Q8-x86.targets" Condition="'$(PlatformTarget)' == 'x86' and Exists('..\packages\Magick.NET-Q8-x86.14.10.0\build\netstandard20\Magick.NET-Q8-x86.targets')" />
+  <Import Project="..\packages\Magick.NET-Q8-x64.14.10.0\build\netstandard20\Magick.NET-Q8-x64.targets" Condition="'$(PlatformTarget)' == 'x64' and Exists('..\packages\Magick.NET-Q8-x64.14.10.0\build\netstandard20\Magick.NET-Q8-x64.targets')" />
   <Import Project="..\packages\CefSharp.Common.143.0.90\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.143.0.90\build\CefSharp.Common.targets')" />
 </Project>
