@@ -42,3 +42,12 @@
 - 修复一键构建脚本默认平台不一致问题：`build.bat` 的默认 `PLATFORM` 从 `x64` 改为 `x86`，与脚本说明和当前可用构建路径保持一致。
 - 修复 x86 构建失败（CS8012）问题：`source/Playnite/Playnite.csproj` 中 `Magick.NET` 引用由固定 `x64` 改为按 `PlatformTarget` 条件选择 `x86/x64`，并同步调整 NuGet targets 的校验与导入条件。
 
+## 2026-02-20
+
+- 新增两个全屏模式内置主题：PS5（PS5ish Slim）和 XBOXSERIES（XBOXSERIESish），从外部主题目录复制到 `source/Playnite.FullscreenApp/Themes/Fullscreen/` 下。
+- 主题 ID 改为内置格式：`Playnite_builtin_PS5Fullscreen`、`Playnite_builtin_XBOXSERIESFullscreen`。
+- 在 `BuiltInExtensions.cs` 的 `BuiltinThemeIds` 数组中注册两个新主题 ID。
+- 在 `Playnite.FullscreenApp.csproj` 中为两个主题的所有 XAML/资源/音频/图片文件添加构建项。
+- 修改全屏模式默认主题为 PS5：`FullscreenSettings.cs` 中 `theme` 字段默认值改为 `Playnite_builtin_PS5Fullscreen`（新安装/首次启动时自动使用 PS5 主题）。
+- `Themes.cs` 中 `DefaultFullscreenThemeId` 保持为 `Playnite_builtin_DefaultFullscreen`（作为回退/基础主题不变）。
+

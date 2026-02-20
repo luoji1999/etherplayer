@@ -110,7 +110,7 @@ namespace Playnite
             }
         }
 
-        private string theme = ThemeManager.DefaultFullscreenThemeId;
+        private string theme = "Playnite_builtin_PS5Fullscreen";
         [RequiresRestart]
         public string Theme
         {

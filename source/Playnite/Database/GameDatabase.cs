@@ -987,7 +987,10 @@ namespace Playnite.Database
 
         public BitmapSource GetFileAsImage(string dbPath, BitmapLoadProperties loadProperties = null)
         {
-            CheckDbState();
+            if (!IsOpen)
+            {
+                return null;
+            }
             var filePath = GetFullFilePath(dbPath);
             if (!File.Exists(filePath))
             {

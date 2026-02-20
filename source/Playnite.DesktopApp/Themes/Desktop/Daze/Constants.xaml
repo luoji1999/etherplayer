@@ -1,0 +1,114 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Colors -->
+    <Color x:Key="WhiteColor">#F2F2F2</Color>
+    <Color x:Key="BlackColor">#000000</Color>
+    <Color x:Key="GreyColor">#3B3B3B</Color>
+    <Color x:Key="LightGreyColor">#8D8D8D</Color>
+    <Color x:Key="DarkGreyColor">#1F1F1F</Color>
+
+    <!-- BRUSHES -->
+    <!-- Main Colors Brushes -->
+    <SolidColorBrush x:Key="FullAlpha" Color="{DynamicResource BlackColor}" Opacity="0" />
+
+    <SolidColorBrush x:Key="White" Color="{DynamicResource WhiteColor}" Opacity="0.9"/>
+    <SolidColorBrush x:Key="LightGrey" Color="{DynamicResource WhiteColor}" Opacity="0.4" />
+    <SolidColorBrush x:Key="AlphaWhite" Color="{DynamicResource WhiteColor}" Opacity="0.2" />
+    <SolidColorBrush x:Key="AlphaBlack" Color="{DynamicResource BlackColor}" Opacity="0.9" />
+    <SolidColorBrush x:Key="AlphaGrey" Color="{DynamicResource GreyColor}" Opacity="0.5" />
+    <SolidColorBrush x:Key="DarkGrey" Color="{DynamicResource BlackColor}" Opacity="0.7" />
+
+    <LinearGradientBrush x:Key="WindowBackground" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{DynamicResource BlackColor}" Offset="0"/>
+        <GradientStop Color="{DynamicResource BlackColor}" Offset="0.9"/>
+    </LinearGradientBrush>
+
+    <!-- Rating Brushes -->
+    <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
+    <SolidColorBrush x:Key="NegativeRatingBrush" Color="#ff6b6b" />
+    <SolidColorBrush x:Key="MixedRatingBrush" Color="#fffca1" />
+
+    <!-- PROPERTIES-->
+    <!-- Scrollbar Width -->
+    <sys:Double x:Key="ScrollbarWidth">12</sys:Double>
+
+    <!-- Rounded Borders -->
+    
+    <CornerRadius x:Key="MainCornerRadius">12</CornerRadius>
+    <CornerRadius x:Key="SlidersCornerRadius">2</CornerRadius>
+
+    <!-- Borders Thickness -->
+    <Thickness x:Key="ControlBorders">2</Thickness>
+    <Thickness x:Key="DefaultControlBorders">0</Thickness>
+    <Thickness x:Key="AllWindowsBorders">0</Thickness>
+    <Thickness x:Key="NoBorders">0</Thickness>
+
+    <!-- THEME MODIFIER SETTINGS-->
+    
+    <!-- Star Rating ON/OFF -->
+    <Visibility x:Key="StarsInGridView">Visible</Visibility>
+
+    <!-- Selected games Border visibility-->
+    <sys:Boolean x:Key="SelectedGameBorder">False</sys:Boolean>
+
+    <!-- Unselected games Opacity -->
+    <sys:Boolean x:Key="UnselectedGamesOpacity">True</sys:Boolean>
+    <sys:Double x:Key="UnselectedGamesOpacityAmount">0.65</sys:Double>
+
+    <!-- Various visibilities -->
+    <Visibility x:Key="GridViewZoomSlider">Visible</Visibility>
+    <Visibility x:Key="ShowCompletitionStatus">Visible</Visibility>
+    <Visibility x:Key="DetailsViewImageBackground">Collapsed</Visibility>
+
+    <!-- COMPLETITION STATUSES -->
+       
+    <!-- Statuses -->
+    <sys:String x:Key="CompletedStatus">Completed</sys:String>
+    <sys:String x:Key="BeatenStatus">Beaten</sys:String>
+    
+    
+    <!-- --><!-- --><!-- --><!-- --><!-- -->
+   
+    <!-- Default Playnite Stuff -->
+
+    <!-- COLORS / BRUSHES (for source code controls and such) -->
+    <SolidColorBrush x:Key="GlyphBrush" Color="{DynamicResource LightGreyColor}" />
+    <SolidColorBrush x:Key="PopupBorderBrush" Color="{DynamicResource GreyColor}" />
+    <SolidColorBrush x:Key="TooltipBackgroundBrush" Color="{DynamicResource GreyColor}" />
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource BlackColor}" />
+    <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource BlackColor}" />
+    <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource BlackColor}" />
+    <SolidColorBrush x:Key="NormalBorderBrush" Color="{DynamicResource LightGreyColor}" />
+    <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource GreyColor}" Opacity="0.6" />
+
+    <SolidColorBrush x:Key="WarningBrush" Color="#ff6b6b" />
+
+    <LinearGradientBrush x:Key="GridItemSelectorBrush" StartPoint="0,1" EndPoint="1,1" Opacity="1">
+        <GradientStop Color="#00000000" Offset="0" />
+        <GradientStop Color="#F8F8F8" Offset="0.5" />
+        <GradientStop Color="#00000000" Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ExpanderBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1"
+        Opacity="0.1">
+        <GradientStop Color="#00000000" Offset="0.9" />
+        <GradientStop Color="#FFFFFF" Offset="0" />
+    </LinearGradientBrush>
+
+    <!-- FONTS-->
+    <sys:Double x:Key="FontSizeSmall">12</sys:Double>
+    <sys:Double x:Key="FontSize">14</sys:Double>
+    <sys:Double x:Key="FontSizeLarge">15</sys:Double>
+    <sys:Double x:Key="FontSizeLarger">20</sys:Double>
+    <sys:Double x:Key="FontSizeLargest">29</sys:Double>
+    <FontFamily x:Key="FontFamily">Lato Light</FontFamily>
+    <FontFamily x:Key="MonospaceFontFamily">Consolas</FontFamily>
+
+    <!-- PROPERTIES -->
+    <Thickness x:Key="PopupBorderThickness">2</Thickness>
+    <sys:Double x:Key="EllipseBorderThickness">0</sys:Double>
+    <Thickness x:Key="SidebarItemPadding">12</Thickness>
+    <Thickness x:Key="ControlBorderThickness">0</Thickness>
+</ResourceDictionary>

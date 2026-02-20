@@ -77,6 +77,8 @@ namespace Playnite.SDK
         {
             "Playnite_builtin_DefaultFullscreen",
             "Playnite_builtin_DefaultDesktop",
+            "Playnite_builtin_PS5Fullscreen",
+            "Playnite_builtin_XBOXSERIESFullscreen",
         };
 
         /// <summary>

@@ -1,0 +1,23 @@
+Constants:
+- IMPORTANT! 
+- Theme colors might break after changing settings here. To avoid that, before saving your changes make sure to click on the "X" next to each color in the "Theme colors" section
+#
+- Theme settings
+- Enable or Disable Theme Features
+- StarsInGridView: Show stars under game covers in Grid view (based on User Score)
+- ShowCompletitionStatus: Show completition badges on game covers in Grid view (Completed or Beaten)
+- GridViewZoomSlider: Show Zoom slider in Grid view
+- DetailsViewImageBackground: Show game's background image in Details View 
+- Selected games border (Grid view)
+- SelectedGameBorder: Enable border on selected games in grid view
+- Unselected games transparency (Grid view)
+- UnselectedGamesOpacity: Enable transparency on unselected games
+- UnselectedGamesOpacityAmount(0,1): Opacity amount for unselected games
+- Theme colors
+- White: White
+- AlphaBlack: Black
+- LightGrey: Light Grey
+- AlphaWhite: Grey
+- DarkGrey: Dark Grey
+- WindowBackground: Window background gradient
+

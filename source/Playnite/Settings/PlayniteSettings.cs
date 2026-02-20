@@ -1120,7 +1120,7 @@ namespace Playnite
             }
         }
 
-        private string theme = ThemeManager.DefaultDesktopThemeId;
+        private string theme = "Playnite_builtin_Stardust";
         [RequiresRestart]
         public string Theme
         {
